@@ -395,99 +395,617 @@ section {
     max-height: 600px;
     object-fit: contain;
 }
-
-
-/* ========================================
+/* ==========================================
    FLOWERS FOR EVERY OCCASION
-   CUSTOMIZATION
-======================================== */
+========================================== */
 
-.categories {
-    background: #fff;
+.occasion-section {
+    padding: 110px 6%;
+    background:
+        radial-gradient(circle at 10% 20%, #fde8ef 0, transparent 28%),
+        radial-gradient(circle at 90% 80%, #f7e0e8 0, transparent 25%),
+        #fffafa;
 }
 
-.customization-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
 
-.custom-option {
-    background: #fff8fa;
-    padding: 35px 30px;
-    border-radius: 20px;
+/* ---------- HEADING ---------- */
+
+.occasion-heading {
+    max-width: 720px;
+    margin: 0 auto 65px;
     text-align: center;
-    border: 1px solid #f0d5de;
-    box-shadow: 0 8px 25px rgba(100, 30, 50, 0.08);
-    transition: all 0.3s ease;
 }
 
-.custom-option:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(100, 30, 50, 0.13);
+.small-title {
+    color: #9b3f5d;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
 }
 
-.custom-icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8dce5;
-    color: #8b1e3f;
-    font-size: 25px;
+.occasion-heading h2 {
+    margin: 12px 0 15px;
+    color: #631b35;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
 }
 
-.custom-option h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #6b1835;
-    margin-bottom: 18px;
+.occasion-heading p {
+    color: #765d66;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
-.custom-option select,
-.custom-option textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #e3bdc9;
-    border-radius: 10px;
+
+/* ---------- OCCASION CARDS ---------- */
+
+.occasion-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.occasion-card {
+    position: relative;
     background: white;
-    color: #5f3040;
-    font-size: 14px;
-    outline: none;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid #f0dce2;
+    box-shadow: 0 12px 35px rgba(93, 27, 50, 0.08);
+    transition: 0.4s ease;
+}
+
+.occasion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(93, 27, 50, 0.16);
+}
+
+.occasion-image {
+    height: 290px;
+    overflow: hidden;
+}
+
+.occasion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.occasion-card:hover .occasion-image img {
+    transform: scale(1.08);
+}
+
+.occasion-content {
+    padding: 25px;
+    position: relative;
+}
+
+.occasion-number {
+    font-family: "Playfair Display", serif;
+    color: #c891a1;
+    font-size: 13px;
+}
+
+.occasion-content h3 {
+    color: #641c35;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    margin: 4px 0 8px;
+}
+
+.occasion-content p {
+    color: #806b73;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+}
+
+.occasion-btn {
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #8b1e3f;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.occasion-btn span {
+    margin-left: 7px;
     transition: 0.3s;
 }
 
-.custom-option select:focus,
-.custom-option textarea:focus {
-    border-color: #8b1e3f;
-    box-shadow: 0 0 0 3px rgba(139, 30, 63, 0.08);
+.occasion-btn:hover span {
+    margin-left: 13px;
 }
 
-.custom-option textarea {
-    resize: vertical;
-    min-height: 110px;
+
+/* ---------- CUSTOM BOUQUET ---------- */
+
+.custom-bouquet {
+    max-width: 1250px;
+    min-height: 330px;
+    margin: 70px auto 0;
+    padding: 55px 65px;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+
+    background:
+        linear-gradient(
+            105deg,
+            #641c35,
+            #8b3150
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.custom-option textarea::placeholder {
-    color: #a48790;
+.custom-bouquet-text {
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
 }
 
-.customize-button-container {
-    text-align: center;
-    margin-top: 35px;
+.custom-bouquet-text .small-title {
+    color: #f4ccd8;
 }
 
-#customize-btn {
+.custom-bouquet-text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 12px 0 15px;
+}
+
+.custom-bouquet-text p {
+    color: #f4dfe5;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.custom-bouquet-btn {
+    margin-top: 25px;
+    padding: 14px 25px;
     border: none;
+    border-radius: 30px;
+    background: white;
+    color: #641c35;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
-    padding: 15px 35px;
+    transition: 0.3s;
 }
+
+.custom-bouquet-btn span {
+    margin-left: 8px;
+}
+
+.custom-bouquet-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ---------- DECORATION ---------- */
+
+.custom-bouquet-decoration {
+    width: 330px;
+    height: 270px;
+    position: relative;
+}
+
+.flower-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    right: 50px;
+    top: 30px;
+}
+
+.flower-two {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    top: 0;
+    font-size: 45px;
+}
+
+.flower-three {
+    width: 90px;
+    height: 90px;
+    left: 10px;
+    bottom: 10px;
+    font-size: 42px;
+}
+
+
+/* ==========================================
+   CUSTOMIZER PANEL
+========================================== */
+
+.customizer-panel {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 28px;
+    padding: 45px;
+    display: none;
+    box-shadow: 0 20px 60px rgba(80, 20, 40, 0.15);
+    border: 1px solid #f0dce2;
+}
+
+.customizer-panel.active {
+    display: block;
+    animation: customOpen 0.5s ease;
+}
+
+@keyframes customOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- HEADER ---------- */
+
+.customizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0dce2;
+    margin-bottom: 35px;
+}
+
+.customizer-header h2 {
+    color: #641c35;
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    margin-top: 8px;
+}
+
+.close-customizer {
+    border: none;
+    background: #f9e9ee;
+    color: #641c35;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* ---------- STEP ---------- */
+
+.customizer-step {
+    margin-bottom: 45px;
+}
+
+.step-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step-title > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #8b1e3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.step-title h3 {
+    color: #641c35;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.step-title p {
+    color: #917983;
+    font-size: 12px;
+}
+
+
+/* ---------- MINI OPTIONS ---------- */
+
+.mini-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mini-options button {
+    border: 1px solid #ead3db;
+    background: #fffafa;
+    color: #641c35;
+    padding: 12px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mini-options button:hover,
+.mini-options button.selected {
+    background: #8b1e3f;
+    border-color: #8b1e3f;
+    color: white;
+}
+
+
+/* ---------- STYLE OPTIONS ---------- */
+
+.style-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.style-options button {
+    border: 1px solid #ead3db;
+    background: #fffafa;
+    border-radius: 16px;
+    padding: 25px 10px;
+    cursor: pointer;
+    color: #641c35;
+    transition: 0.3s;
+}
+
+.style-options button span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.style-options strong {
+    display: block;
+}
+
+.style-options small {
+    color: #92747e;
+}
+
+.style-options button:hover,
+.style-options button.selected {
+    background: #8b1e3f;
+    color: white;
+}
+
+.style-options button.selected small {
+    color: #f5dce4;
+}
+
+
+/* ---------- FLOWER OPTIONS ---------- */
+
+.flower-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.flower-options button {
+    padding: 7px;
+    border: 1px solid #ead3db;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flower-options img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flower-options span {
+    display: block;
+    color: #641c35;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+
+.flower-options button:hover,
+.flower-options button.selected {
+    border: 3px solid #8b1e3f;
+    transform: translateY(-3px);
+}
+
+
+/* ---------- ADD ONS ---------- */
+
+.add-on-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.add-on-options button {
+    border: 1px solid #ead3db;
+    background: #fffafa;
+    padding: 16px;
+    border-radius: 12px;
+    color: #641c35;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.add-on-options button:hover,
+.add-on-options button.selected {
+    background: #8b1e3f;
+    color: white;
+}
+
+
+#special-requirements {
+    width: 100%;
+    min-height: 110px;
+    margin-top: 18px;
+    border: 1px solid #ead3db;
+    border-radius: 14px;
+    padding: 15px;
+    outline: none;
+    resize: vertical;
+}
+
+#special-requirements:focus {
+    border-color: #8b1e3f;
+}
+
+
+/* ---------- SUMMARY ---------- */
+
+.customizer-summary {
+    padding: 25px;
+    border-radius: 18px;
+    background: #641c35;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.customizer-summary > div span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #e9c4cf;
+}
+
+.customizer-summary h3 {
+    font-family: "Playfair Display", serif;
+    margin-top: 6px;
+}
+
+.create-bouquet-btn {
+    border: none;
+    background: white;
+    color: #641c35;
+    padding: 14px 23px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .occasion-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flower-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .style-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-on-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .occasion-section {
+        padding: 75px 5%;
+    }
+
+    .occasion-heading h2 {
+        font-size: 36px;
+    }
+
+    .occasion-container {
+        grid-template-columns: 1fr;
+    }
+
+    .occasion-image {
+        height: 300px;
+    }
+
+    .custom-bouquet {
+        padding: 35px 25px;
+        min-height: auto;
+    }
+
+    .custom-bouquet-text h2 {
+        font-size: 29px;
+    }
+
+    .custom-bouquet-decoration {
+        display: none;
+    }
+
+    .customizer-panel {
+        padding: 25px 18px;
+        border-radius: 20px;
+    }
+
+    .customizer-header h2 {
+        font-size: 30px;
+    }
+
+    .flower-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-on-options {
+        grid-template-columns: 1fr;
+    }
+
+    .customizer-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .create-bouquet-btn {
+        width: 100%;
+    }
+}
+
+
+ 
+
+    
+    
 
 
 /* ========================================
